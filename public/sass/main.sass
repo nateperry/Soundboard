@@ -1,0 +1,80 @@
+@import compass
+@import compass/reset
+@import vendor/normalize
+@import vendor/foundation
+
+// COLORS
+$black: #333333
+$grey: #888888
+$grey-light: #CCCCCC
+$white: #FFFFFF
+$body-bg: #EAEAEA
+$green: #009600
+$orange: #FF8F00
+$red: #E40606
+$blue-light: #005FD8
+
+*
+  +box-sizing(border-box)
+
+html, body
+  height: 100%
+  margin: 0
+  min-height: 100%
+  min-width: 100%
+  padding: 0
+  width: 100%
+
+body
+  background: $body-bg
+  color: $black
+
+#main
+  padding: 15px 0
+
+#topbar
+  background: $white
+  border-bottom: 1px solid $grey-light
+
+.sound
+  background: $white
+  border: 1px solid $grey-light
+  +border-radius(8px)
+  display: inline-block
+  margin-bottom: 10px
+  padding: 10px
+  position: relative
+  width: 100%
+
+.options
+  color: $grey-light
+  text-align: right
+  padding: 0 10px
+  position: absolute
+  right: 0
+  top: 0
+  width: 100%
+  .fa
+    cursor: pointer
+
+.controls
+  +user-select(none)
+  .fa
+    cursor: pointer
+    margin-right: 15px
+    width: 20px
+    &:hover
+      color: $grey-light
+    &:last-child
+      margin-right: 0
+  .play
+    &.playing
+      color: $green
+    &.paused
+      color: $orange
+  .stop
+    &.stopped
+      color: $red
+  .repeat
+    &.repeating
+      color: $blue-light
